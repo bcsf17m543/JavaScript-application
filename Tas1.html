@@ -1,0 +1,79 @@
+
+<html>
+    <head>
+        <title>Task 1</title>
+        <script language="JavaScript" type="text/javascript">
+            function makeEmpty()
+            {
+                document.getElementById('errfn').innerHTML="";	
+                document.getElementById('errem').innerHTML="";	
+                document.getElementById('errps').innerHTML="";	
+            }
+            function CheckEmail(str) //valid email
+            {
+                var loc=str.indexof('@');
+                var car=str.indexof('.');
+                if (str =="") {
+                    return false;
+                        }
+                else
+                {
+                return true;
+                }               
+
+            }
+         function validate()
+            {
+                makeEmpty();
+                var valid=true;
+                var str=document.lab9_task1.email.value;
+                if(!CheckEmail(str))
+                {
+                    document.getElementById('errem').innerHTML="please enter a valid email.";			
+                    valid=false;
+                }
+                
+               
+
+    //     	if ( document.lab9_task1.uname.value == "" )
+	//         {
+    //             document.getElementById('errfn').innerHTML="please fill this.";			
+	// 		    valid=false;
+	//         }
+    
+	// if(document.lab9_task1.pass.value == "")	
+	//    {
+
+    //     document.getElementById('errps').innerHTML="invalid password";			
+	// 		document.lab9_task1.pass.focus();
+	// 		valid=false;
+	//    }	
+
+	// if(document.lab9_task1.pass.value!=document.lab9_task1.confpassword.value)
+	// {
+    //     document.getElementById('errps').innerHTML="invalid password";			
+
+	// 		document.lab9_task1.confpassword.focus();
+	// 		valid=false;
+	// }
+
+            return valid;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="lab9_task1" id ="lab9_task1" onsubmit="return validate()">
+            <br>
+            <label>User Name</label><br>
+            <input type="text" id="uname" name="uname"><span id="errfn" style="color: red;"></span><br><br>
+            <label>User Email</label><br>
+            <input type="text" id="email" name="email"><span id="errem" style="color: red;"></span><br><br>
+            <label>Password</label><br>
+            <input type="password" id="pass" name="pass"><span id="errps" style="color: red;"></span><br><br>
+            <label>Confirm Password</label><br>
+            <input type="password" id="confpassword" name="confpassword"><span id="errps" style="color: red;"></span><br><br>
+            <input type="submit" value="Submit">
+
+        </form>
+    </body>
+</html>

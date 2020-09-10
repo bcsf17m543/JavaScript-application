@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task 2</title>
+        
+        <script>
+           function mySub()
+           {
+            var a = prompt("Enter First number : ", "");
+                if(isNaN(a))
+                {
+                    alert("Please enter a number.");
+                    return;
+                }
+                var b = prompt("Enter second number : ", "");
+                if(isNaN(b))
+                {
+                    alert("Please enter a number.");
+                    return;
+                }
+                var num1=parseInt(a);
+                var num2=parseInt(b);
+                var c=num1-num2;
+              
+                    alert(a + "\n"+ b+"\n"+"-"+"Sub : "+c);      
+                
+           }
+           function myMul()
+           {
+            var a = prompt("Enter First number : ", "");
+                if(isNaN(a))
+                {
+                    alert("Please enter a number.");
+                    return;
+                }
+                var b = prompt("Enter second number : ", "");
+                if(isNaN(b))
+                {
+                    alert("Please enter a number.");
+                    return;
+                }
+                var num1=parseInt(a);
+                var num2=parseInt(b);
+                var c=num1*num2;
+              
+                    alert(a + "\n"+ b+"\n"+"*"+"Product : "+c);      
+                
+           }
+           function myDiv()
+           {
+            var a = prompt("Enter First number : ", "");
+                if(isNaN(a))
+                {
+                    alert("Please enter a number.");
+                    return;
+                }
+                var b = prompt("Enter second number : ", "");
+                if(isNaN(b))
+                {
+                    alert("Please enter a number.");
+                    return;
+                }
+                
+                var num1=parseInt(a);
+                var num2=parseInt(b);
+                if(num2==0)
+                {
+                    alert("Error:Division by zero.");
+                    return;
+                }
+                var c=num1/num2;
+              
+                    alert(a + "\n"+ b+"\n"+"/"+"Division : "+c);      
+                
+           }
+            function mySum()
+            {
+                var a = prompt("Enter First number : ", "");
+                if(isNaN(a))
+                {
+                    alert("Please enter a number.");
+                    return;
+                }
+                var b = prompt("Enter second number : ", "");
+                if(isNaN(b))
+                {
+                    alert("Please enter a number.");
+                    return;
+                }
+                var num1=parseInt(a);
+                var num2=parseInt(b);
+                var c=num1+num2;
+              
+                    alert(a + "\n"+ b+"\n"+"+"+"Sum : "+c);      
+                
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Task 2</h3>
+        <form name="lab9_task2" id="lab9_task2">
+            <br>
+            <button onclick="mySum()" id="b1">Sum</button>
+            <br>
+            <br>
+            <button onclick="mySub()">Subtraction</button>
+            <br>
+            <br>
+            <button onclick="myMul()">Multiply</button>
+            <br>
+            <br>
+            <button onclick="myDiv()">Divide</button>
+            <br>
+            <br>
+           
+        </form>
+    </body>
+   
+</html>
